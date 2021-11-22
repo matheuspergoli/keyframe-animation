@@ -1,0 +1,110 @@
+body {
+    width: 700px;
+    margin: auto;
+    background-color: black;
+}
+
+#bg {
+    color: rgb(180, 243, 243);
+    background-image: linear-gradient(to right, blue, red);
+    text-align: center;
+    font-size: 50px;
+}
+
+#dica {
+    position: absolute;
+    top: 735px;
+    left: 129px;
+    color: rgb(180, 243, 243);
+    background-color: transparent;
+    font-size: 20px;
+
+    animation-name: andar-dica;
+    animation-duration: 10s;
+    animation-delay: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#chao {
+    position: absolute;
+    width: 700px;
+    height: 87px;
+    background: url(imagens/terreno.jpg);
+    left: -1px;
+    top: 505px;
+}
+
+#carro {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: url(imagens/car.png);
+    background-size: contain;
+    top: 510px;
+    left: 0px;
+
+    animation-name: andar-carro;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+
+#lua {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: -90px;
+    left: 0px;
+    background: url(imagens/planet.png);
+
+    animation-name: andar-lua;
+    animation-duration: 30s;
+    animation-delay: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#mundo {
+    position: relative;
+    border: 1px solid red;
+    height: 590px;
+    background: url(imagens/space.png);
+}
+
+#mundo:hover #carro {
+    animation-play-state: running;
+}
+
+@keyframes andar-dica {
+    from {transform: translateX(0px);}
+    to {transform: translateX(320px);}
+}
+
+@keyframes andar-lua {
+    from {transform: translateX(0px);}
+    to {transform: translateX(300px);}
+}
+
+@keyframes andar-carro {
+    from {transform: translateX(0px);}
+    to {transform: translateX(600px);}
+}
+
+
+/* @keyframes girar {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+} */
+
+/* @keyframes andar-girar {
+    0% {transform: translateX(0px) rotate(0deg);}
+    100% {transform: translateX(500px) rotate(360deg);}
+} */
+
+/* @keyframes mudar-cor {
+    0%{background-color: red;}
+    100%{background-color: blue;}
+} */
